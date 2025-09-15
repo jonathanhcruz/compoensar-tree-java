@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class NodeActions {
 
-    public static void CreateTree( Node currentNode ) {
+    public static void createTree(Node currentNode ) {
         System.out.println("Current node: " + currentNode.getValue());
 
         // Preguntar por nodo izquierdo
@@ -35,11 +35,11 @@ public class NodeActions {
 
         // Recursivamente construir subárboles
         if (currentNode.getLeft() != null) {
-            CreateTree(currentNode.getLeft());
+            createTree(currentNode.getLeft());
         }
 
         if (currentNode.getRight() != null) {
-            CreateTree(currentNode.getRight());
+            createTree(currentNode.getRight());
         }
     }
 

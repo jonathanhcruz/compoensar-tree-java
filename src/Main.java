@@ -18,7 +18,7 @@ public class Main {
             SystemGetInput questioRootValue = new SystemGetInput("witch is the root Node Value?");
             String rootValue = questioRootValue.getResponse();
             Node root = new Node(rootValue);
-            nodeActions.CreateTree(root);
+            nodeActions.createTree(root);
 
             SystemGetInput questionTreeName = new SystemGetInput("Enter a name for this tree:");
             String treeName = questionTreeName.getResponse().trim();
