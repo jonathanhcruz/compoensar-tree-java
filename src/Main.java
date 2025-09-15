@@ -26,7 +26,7 @@ public class Main {
             trees.add(new NodeList(root, treeName));
         }));
         menu.add(new MenuItems("Show the trees root list", true, () -> {
-            main.printNodeList(trees);
+            main.printTreeList(trees);
         }));
         menu.add(new MenuItems("Show a selected Tree", true, () -> {
             if (trees.isEmpty()) {
@@ -34,7 +34,7 @@ public class Main {
                 return;
             }
 
-            main.printNodeList(trees);
+            main.printTreeList(trees);
 
            Node treeIndex = main.selectTree(trees, "Select the tree number to show:");
            nodeActions.showTree(treeIndex);
@@ -45,7 +45,7 @@ public class Main {
                 return;
             }
 
-            main.printNodeList(trees);
+            main.printTreeList(trees);
             Node treeIndex = main.selectTree(trees, "Select the tree number to get its height:");
 
             int heightTree = nodeActions.heightTree(treeIndex);
@@ -57,7 +57,7 @@ public class Main {
                 return;
             }
 
-            main.printNodeList(trees);
+            main.printTreeList(trees);
             Node selectTree = main.selectTree(trees, "Select the tree number to perform DFS:");
             String dfsType = main.chooseDFSType();
 
@@ -78,7 +78,7 @@ public class Main {
         program.run();
     }
 
-    private void printNodeList (ArrayList<NodeList> trees) {
+    private void printTreeList(ArrayList<NodeList> trees) {
         if (trees.isEmpty()) {
             System.out.println("There are no trees created yet.");
         }
